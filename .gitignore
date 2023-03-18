@@ -23,9 +23,9 @@
 
 
 # В каталоге /etc/opt игнорируем все, кроме README.md файла
-!/etc/opt
-/etc/opt/*
-!/etc/opt/README.md
+!/etc/install
+/etc/install/*
+!/etc/install/README.md
 # Дополнительные исключения вносить вручную для каждого необходимого каталога или файла
 # !/etc/opt/your_file
 
@@ -82,9 +82,3 @@
 !/var/log
 /var/log/*
 !/var/log/README.md
-
-
-# В каталоге /var/opt игнорируем все, кроме README.md файла
-!/var/opt
-/var/opt/*
-!/var/opt/README.md
