@@ -26,6 +26,14 @@
 !/etc/install
 /etc/install/*
 !/etc/install/README.md
+!/etc/install/CerediraFHS
+/etc/install/CerediraFHS/*
+!/etc/install/CerediraFHS/CreateContextMenu.bat
+!/etc/install/CerediraFHS/DeleteContextMenu.bat
+!/etc/install/CerediraFHS/DeleteComponent.bat
+!/etc/install/CerediraFHS/version
+/etc/install/CerediraFHS/version/*
+!/etc/install/CerediraFHS/version/1.0
 # Дополнительные исключения вносить вручную для каждого необходимого каталога или файла
 # !/etc/opt/your_file
 
