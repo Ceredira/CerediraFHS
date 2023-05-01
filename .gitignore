@@ -90,3 +90,10 @@
 !/var/log
 /var/log/*
 !/var/log/README.md
+
+
+!/MDData
+/MDData/*
+!/MDData/images
+/MDData/images/*
+!/MDData/images/CerediraFHSMain.png
