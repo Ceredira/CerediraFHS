@@ -9,30 +9,45 @@ for %%i in (%~dp0\..\..\..) do set ceredira_path=%%~fxi
 rem set ceredira_path=D:\Ceredira_*.*
 echo Корневой каталог: %ceredira_path%
 
-echo. && echo Скрипт удаляет только файлы из дистрибутива CerediraFHS
-echo. && echo Скрипт не удаляет каталоги, даже пустые каталоги
+del "%ceredira_path%\var\README.md"
+del "%ceredira_path%\var\log\README.md"
+del "%ceredira_path%\tmp\README.md"
+del "%ceredira_path%\README.md"
+del "%ceredira_path%\opt\README.md"
+del "%ceredira_path%\MDData\images\CerediraFHSMain.png"
+del "%ceredira_path%\man\README.md"
+del "%ceredira_path%\LICENSE"
+del "%ceredira_path%\lib\README.md"
+del "%ceredira_path%\home\README.md"
+del "%ceredira_path%\etc\ssl\README.md"
+del "%ceredira_path%\etc\README.md"
+del "%ceredira_path%\etc\install\README.md"
+del "%ceredira_path%\etc\install\CerediraFHS\version\1.0.0"
+del "%ceredira_path%\etc\install\CerediraFHS\DeleteContextMenu.bat"
+rem Этот файл нельзя удалять, так как выполнение скрипта прервется
+rem Необходимо удалять отдельными командами из инсталлятора или вручную
+rem del "%ceredira_path%\etc\install\CerediraFHS\DeleteComponent.bat"
+del "%ceredira_path%\etc\install\CerediraFHS\CreateContextMenu.bat"
+del "%ceredira_path%\bin\README.md"
+del "%ceredira_path%\.gitignore"
 
-echo. && echo Далее необходимо подтвердить удаление каждого файла
 
-del "%ceredira_path%\bin\README.md" /p
-del "%ceredira_path%\etc\install\CerediraFHS\version\1.0" /p
-del "%ceredira_path%\etc\install\CerediraFHS\CreateContextMenu.bat" /p
-del "%ceredira_path%\etc\install\CerediraFHS\DeleteContextMenu.bat" /p
-del "%ceredira_path%\etc\install\README.md" /p
-del "%ceredira_path%\etc\ssl\README.md" /p
-del "%ceredira_path%\etc\README.md" /p
-del "%ceredira_path%\home\README.md" /p
-del "%ceredira_path%\lib\README.md" /p
-del "%ceredira_path%\man\README.md" /p
-del "%ceredira_path%\opt\README.md" /p
-del "%ceredira_path%\tmp\README.md" /p
-del "%ceredira_path%\var\log\README.md" /p
-del "%ceredira_path%\var\README.md" /p
-del "%ceredira_path%\.gitignore" /p
-del "%ceredira_path%\LICENSE" /p
-del "%ceredira_path%\README.md" /p
-
-echo. && echo После удаления следующего компонента, скрипт будет автоматически закрыт
-del "%ceredira_path%\etc\install\CerediraFHS\DeleteComponent.bat" /p
+rmdir "%ceredira_path%\var\log"
+rmdir "%ceredira_path%\var"
+rmdir "%ceredira_path%\tmp"
+rmdir "%ceredira_path%\opt"
+rmdir "%ceredira_path%\MDData\images"
+rmdir "%ceredira_path%\MDData"
+rmdir "%ceredira_path%\man"
+rmdir "%ceredira_path%\lib"
+rmdir "%ceredira_path%\home"
+rmdir "%ceredira_path%\etc\ssl"
+rmdir "%ceredira_path%\etc\install\CerediraFHS\version"
+rem Этот каталог нельзя удалять, так как он не пустой
+rem Необходимо удалять отдельными командами из инсталлятора или вручную
+rem rmdir "%ceredira_path%\etc\install\CerediraFHS"
+rem rmdir "%ceredira_path%\etc\install"
+rem rmdir "%ceredira_path%\etc"
+rmdir "%ceredira_path%\bin"
 
 pause
